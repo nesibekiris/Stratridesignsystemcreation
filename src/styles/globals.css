@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* STRATRI Brand Colors - STRICT PALETTE */
+    --color-stratri-cream: #FEFBF8;
+    --color-stratri-dark: #1E2A45;
+    --color-stratri-accent: #184A5A;
+    --color-stratri-light: #7A95AB; /* Updated from #9FB7C8 for WCAG AA compliance - minimum 4.5:1 contrast ratio on cream background */
+    --color-stratri-divider: #E8E4DF;
+    
+    /* Typography - STRATRI Design System - Updated */
+    --font-headline: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'IBM Plex Serif', Georgia, serif;
+    
+    /* Legacy aliases for backward compatibility */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'IBM Plex Serif', Georgia, serif;
+    
+    /* Spacing Scale */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
+    
+    /* Border Radius */
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    
+    /* Shadows - Minimal, Ink-inspired */
+    --shadow-ink-subtle: 0 2px 4px rgba(30, 42, 69, 0.08);
+    --shadow-ink-medium: 0 4px 8px rgba(30, 42, 69, 0.12);
+    --shadow-ink-hover: 0 6px 12px rgba(30, 42, 69, 0.15);
+  }
+
+  * {
+    /* Ensure only STRATRI background color */
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--color-stratri-cream);
+    color: var(--color-stratri-dark);
+    font-family: var(--font-sans);
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--color-stratri-dark);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.15;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    line-height: 1.35;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.7;
+    font-family: var(--font-sans);
+  }
+
+  /* Italic emphasis for key words */
+  em, .emphasis {
+    font-style: italic;
+    font-family: var(--font-serif);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Japanese ink animation utilities */
+  .ink-float {
+    animation: inkFloat 8s ease-in-out infinite;
+  }
+
+  .ink-pulse {
+    animation: inkPulse 6s ease-in-out infinite;
+  }
+
+  @keyframes inkFloat {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-3px, -5px); }
+  }
+
+  @keyframes inkPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.9; }
+  }
+
+  /* Alice.io-inspired animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Animation utility classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.25s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.25s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+
+  /* Hover transitions */
+  .transition-governance {
+    transition: all 0.15s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .transition-smooth {
+    transition: all 0.25s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  /* Focus Visibility - WCAG 2.1 Level AA Compliant */
+  .focus-visible-ring {
+    outline: none;
+  }
+  
+  .focus-visible-ring:focus-visible {
+    outline: 2px solid #184A5A;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Skip to content link - Accessibility */
+  .skip-to-content {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--color-stratri-accent);
+    color: var(--color-stratri-cream);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    z-index: 100;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: top 0.2s ease;
+  }
+
+  .skip-to-content:focus {
+    top: 0;
+  }
+
+  /* Touch target minimum size - Mobile accessibility */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
