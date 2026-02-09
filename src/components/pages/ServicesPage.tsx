@@ -1,3 +1,5 @@
+'use client';
+
 import type { SiteContent } from '../../App';
 import { Button } from '../Button';
 import { RailwayDiagram, RailwayVisual, StepNumber } from '../visuals';

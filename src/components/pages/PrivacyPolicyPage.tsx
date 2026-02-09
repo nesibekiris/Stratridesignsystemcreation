@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '../Button';
 import type { SiteContent, Language } from '../../App';

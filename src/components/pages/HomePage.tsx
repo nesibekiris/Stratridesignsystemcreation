@@ -1,3 +1,5 @@
+'use client';
+
 import type { SiteContent, Language } from '../../App';
 import { Button } from '../Button';
 import { CrossroadsInk } from '../visuals';
