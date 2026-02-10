@@ -1,7 +1,5 @@
-'use client';
-
 import { useState } from 'react';
-import type { SiteContent } from '@/types/content';
+import type { SiteContent } from '../../App';
 import { Mail, Linkedin } from 'lucide-react';
 import { ConnectInk } from '../visuals';
 

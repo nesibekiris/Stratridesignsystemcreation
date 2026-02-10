@@ -18,7 +18,7 @@ import { Button } from './Button';
 import { PillarCard, InsightCard } from './Card';
 import { Newsletter } from './Newsletter';
 import { TechnologyInk, PolicyInk, SocietyInk, RailwayInk, InsightsInk } from './visuals';
-import techletterLogo from '@/assets/d0e6a56470d6f5b4bd19d622f3fe45ba59c67a2f.png';
+import techletterLogo from 'figma:asset/d0e6a56470d6f5b4bd19d622f3fe45ba59c67a2f.png';
 
 interface BlockRendererProps {
   blocks: ContentBlock[];

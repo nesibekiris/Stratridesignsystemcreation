@@ -10,7 +10,7 @@
     --color-stratri-cream: #FEFBF8;
     --color-stratri-dark: #1E2A45;
     --color-stratri-accent: #184A5A;
-    --color-stratri-light: #7A95AB; /* Updated from #9FB7C8 for WCAG AA compliance - minimum 4.5:1 contrast ratio on cream background */
+    --color-stratri-light: #9FB7C8;
     --color-stratri-divider: #E8E4DF;
     
     /* Typography - STRATRI Design System - Updated */
@@ -216,43 +216,5 @@
 
   .transition-smooth {
     transition: all 0.25s cubic-bezier(0.65, 0, 0.35, 1);
-  }
-
-  /* Focus Visibility - WCAG 2.1 Level AA Compliant */
-  .focus-visible-ring {
-    outline: none;
-  }
-  
-  .focus-visible-ring:focus-visible {
-    outline: 2px solid #184A5A;
-    outline-offset: 2px;
-    border-radius: 2px;
-  }
-
-  /* Skip to content link - Accessibility */
-  .skip-to-content {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    background: var(--color-stratri-accent);
-    color: var(--color-stratri-cream);
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 0 0 4px 0;
-    z-index: 100;
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: top 0.2s ease;
-  }
-
-  .skip-to-content:focus {
-    top: 0;
-  }
-
-  /* Touch target minimum size - Mobile accessibility */
-  .touch-target {
-    min-width: 44px;
-    min-height: 44px;
   }
 }

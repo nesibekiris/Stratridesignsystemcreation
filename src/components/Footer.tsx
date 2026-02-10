@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Linkedin, Mail } from 'lucide-react';
 import { Button } from './Button';
 
@@ -28,7 +28,7 @@ export function Footer() {
               </h4>
               <div className="space-y-3">
                 <Link
-                  href="/services"
+                  to="/services"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -36,7 +36,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/services#ai-strategy-maturity"
+                  to="/services#ai-strategy-maturity"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -44,7 +44,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/services#ai-governance-ethics-literacy"
+                  to="/services#ai-governance-ethics-literacy"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -52,7 +52,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/services#market-policy-research"
+                  to="/services#market-policy-research"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -60,7 +60,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/services#policy-government-affairs"
+                  to="/services#policy-government-affairs"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -76,7 +76,7 @@ export function Footer() {
               </h4>
               <div className="space-y-3">
                 <Link
-                  href="/services/railway"
+                  to="/services/railway"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -84,7 +84,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/services/railway#rail"
+                  to="/services/railway#rail"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -100,7 +100,7 @@ export function Footer() {
               </h4>
               <div className="space-y-3">
                 <Link
-                  href="/insights"
+                  to="/insights"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -108,7 +108,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/insights"
+                  to="/insights"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -116,7 +116,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/insights"
+                  to="/insights"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -124,7 +124,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/insights"
+                  to="/insights"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -140,7 +140,7 @@ export function Footer() {
               </h4>
               <div className="space-y-3 mb-8">
                 <Link
-                  href="/about"
+                  to="/about"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -148,7 +148,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  href="/connect"
+                  to="/connect"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -182,19 +182,16 @@ export function Footer() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-xs text-stratri-dark/50 font-sans">
-                &copy; {currentYear} STRATRI. All rights reserved.
+                © {currentYear} STRATRI. All rights reserved.
               </p>
               <div className="flex items-center gap-6 text-xs text-stratri-dark/50 font-sans">
-                <Link
-                  href="/privacy-policy"
-                  className="hover:text-stratri-accent transition-colors"
-                >
+                <Link to="/privacy" className="hover:text-stratri-accent transition-colors">
                   Privacy Policy
                 </Link>
-                <Link
-                  href="/cookie-policy"
-                  className="hover:text-stratri-accent transition-colors"
-                >
+                <Link to="/terms" className="hover:text-stratri-accent transition-colors">
+                  Terms
+                </Link>
+                <Link to="/cookies" className="hover:text-stratri-accent transition-colors">
                   Cookie Policy
                 </Link>
               </div>
