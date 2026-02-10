@@ -1,6 +1,6 @@
 'use client';
 
-import type { SiteContent, Language } from '../../App';
+import type { SiteContent, Language } from '@/types/content';
 import { Button } from '../Button';
 import { CrossroadsInk } from '../visuals';
 import { TechnologyIcon, PolicyIcon, SocietyIcon, AIStrategyMaturityIcon, AIGovernanceEthicsIcon, MarketPolicyResearchIcon, PolicyGovernmentAffairsIcon } from '../Icons';

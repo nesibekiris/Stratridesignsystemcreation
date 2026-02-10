@@ -1,6 +1,8 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Menu, X, Linkedin, Mail } from 'lucide-react';
-import type { SiteContent, Language } from '../App';
+import type { SiteContent, Language } from '@/types/content';
 import { Button } from './Button';
 import { ServicesPage } from './pages/ServicesPage';
 import { InsightsPage } from './pages/InsightsPage';
@@ -17,7 +19,7 @@ import { GovernanceSuiteGrid, type GovernanceSuiteItem } from './GovernanceSuite
 import { CrossroadsRisks, defaultRisks } from './CrossroadsRisks';
 import { MetricStrip, defaultMetrics } from './MetricStrip';
 import { StrategyIcon, GovernanceIcon, ResearchIcon, PolicyAffairsIcon } from './Icons';
-import techletterLogo from '../assets/techletter-logo.svg';
+const techletterLogo = '/techletter-logo.svg';
 import { NavigationDropdown } from './NavigationDropdown';
 import { MobileNavigationItem } from './MobileNavigationItem';
 

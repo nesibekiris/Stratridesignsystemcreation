@@ -1,6 +1,8 @@
+'use client';
+
 import { useState } from 'react';
 import { Home, Settings as SettingsIcon, Image, FileText, Palette, Menu as MenuIcon, BookOpen, Users, Mail, Layout, LogOut, User, Shield } from 'lucide-react';
-import type { SiteContent } from '../../App';
+import type { SiteContent } from '@/types/content';
 import { HeroEditor } from './editors/HeroEditor';
 import { ThreeRoadsEditor } from './editors/ThreeRoadsEditor';
 import { ServicesEditor } from './editors/ServicesEditor';

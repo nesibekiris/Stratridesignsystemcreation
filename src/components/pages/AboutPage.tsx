@@ -1,6 +1,6 @@
 'use client';
 
-import type { SiteContent } from '../../App';
+import type { SiteContent } from '@/types/content';
 import { Button } from '../Button';
 import { 
   ConvergingPaths, 

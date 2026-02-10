@@ -1,4 +1,6 @@
-import type { SiteContent } from '../../App';
+'use client';
+
+import type { SiteContent } from '@/types/content';
 import { Button } from '../Button';
 import { InsightsHeroInk, BlogCoverTemplate } from '../visuals';
 import { useState, useEffect } from 'react';

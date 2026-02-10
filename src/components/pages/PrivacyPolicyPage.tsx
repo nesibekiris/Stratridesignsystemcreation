@@ -2,7 +2,7 @@
 
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '../Button';
-import type { SiteContent, Language } from '../../App';
+import type { SiteContent, Language } from '@/types/content';
 
 interface PrivacyPolicyPageProps {
   content: SiteContent;

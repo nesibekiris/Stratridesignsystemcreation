@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronRight, Save, X, Plus, Trash2, Settings, Layout } from 'lucide-react';
-import type { SiteContent } from '../../App';
+import type { SiteContent } from '@/types/content';
 import { PageBuilder } from './PageBuilder';
 import { ContentBlock } from '../../types/blocks';
 
